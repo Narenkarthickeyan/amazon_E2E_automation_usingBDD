@@ -13,7 +13,7 @@ test.describe('Amazon Functional Tests', () => {
         await homePage.navigate();
         await homePage.sigin();
         //singinpage
-        await loginPage.validLogin({emilorphone:"7010070991",Password:"Naren@9697"});
+        await loginPage.validLogin({emilorphone:"Enteryouremail",Password:"EnteryourPassword"});
     });
     test('Sign in with Invalid credentials', async ({ page }) => {
         const homePage = new AmazonHomePage(page);
@@ -22,7 +22,7 @@ test.describe('Amazon Functional Tests', () => {
         await homePage.navigate();
         await homePage.sigin();
         //singinpage
-        await loginPage.invalidLogin({emilorphone:"7010070990"});
+        await loginPage.invalidLogin({emilorphone:"*********"});
     });
     test('Search and add a product after signing in', async ({ page }) => {
         const homePage = new AmazonHomePage(page);
@@ -33,7 +33,7 @@ test.describe('Amazon Functional Tests', () => {
         await homePage.navigate();
         await homePage.sigin();
         //singinpage
-        await loginPage.validLogin({emilorphone:"7010070991",Password:"Naren@9697"});
+        await loginPage.validLogin({emilorphone:"Enteryouremail",Password:"EnteryourPassword"});
         //select the laptop
         await homePage.searchForProduct('Laptop');
         await productPage.selectLaptop();
